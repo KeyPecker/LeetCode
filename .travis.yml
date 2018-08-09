@@ -1,0 +1,6 @@
+before_install:
+- sudo apt update -qq
+- sudo apt install -qq 
+install:
+  apt install clang-6.0 build-essential make
+matrix:
