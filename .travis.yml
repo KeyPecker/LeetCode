@@ -3,5 +3,6 @@ before_install:
 - git clone https://github.com/llvm-mirror/llvm.git ~/llvm_src; mkdir ~/llvm_build
 - cd ~/llvm_src/tools; git clone https://github.com/llvm-mirror/clang.git
 - cd ~/llvm_build
-- cmake ~/llvm_src -DLLVM_TARGETS_TO_BUILD="X86" -DLLVM_ENABLE_PROJECTS="all" -DBUILD_SHARED_LIB=1
-- make package -j 2; sudo make install
+- cmake ~/llvm_src -DLLVM_TARGETS_TO_BUILD="X86" -DBUILD_SHARED_LIB=1
+- make package -j 4; sudo make install
+- travis_wait 300
