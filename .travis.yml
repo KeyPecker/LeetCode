@@ -1,6 +1,7 @@
 before_install:
+- wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+- sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main"
 - sudo apt update -qq
 - sudo apt install -qq 
 install:
-  sudo apt install clang-6.0 build-essential make
-matrix:
+- sudo apt install clang-6.0 build-essential make
