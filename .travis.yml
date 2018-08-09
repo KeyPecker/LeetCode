@@ -4,4 +4,4 @@ before_install:
 - cd ~/llvm_src/tools; git clone https://github.com/llvm-mirror/clang.git
 - cd ~/llvm_build
 - cmake ~/llvm_src -DLLVM_TARGETS_TO_BUILD="X86"
-- make -j; sudo make install
+- make package -j 2; sudo make install
