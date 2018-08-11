@@ -5,4 +5,4 @@ compiler:
   - g++
 
 script:
-  - make
+  - make -j
