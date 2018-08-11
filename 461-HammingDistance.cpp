@@ -1,5 +1,10 @@
 // 461. Hamming Distance
 
+//
+// Code ran at 0ms even with out
+// std::cout hack
+//
+
 #include <iostream>
 
 class Solution {
