@@ -1,8 +1,12 @@
 language: cpp
+
 compiler:
-- clang++
-- g++
+  - clang++
+  - g++
 
 install: 
-  - cd LeetCode
-  - make all
+  - cd {TRAVIS_BUILD_DIR}
+
+script:
+  - cd ${TRAVIS_BUILD_DIR}
+  - make
