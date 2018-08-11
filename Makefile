@@ -1,10 +1,14 @@
 CXX=clang++
 CXXFLAGS=-std=c++11
 
-all: 657 709 771 804
+all: 657 709 771 804 461
 
 make-bin:
 	mkdir -p ./bin
+
+461: 461-HammingDistance.cpp
+	mkdir -p ./bin
+	$(CXX) $(CXXFLAGS) $^ -o ./bin/$@
 
 657: 657-JudgeRouteCircle.cpp
 	mkdir -p ./bin
