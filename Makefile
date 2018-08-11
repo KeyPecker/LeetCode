@@ -1,7 +1,7 @@
 CXX=clang++
 CXXFLAGS=-std=c++11
 
-all: 657
+all: 657 709 771 804
 
 make-bin:
 	mkdir -p ./bin
