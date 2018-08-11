@@ -1,8 +1,6 @@
-before_install:
-- sudo apt install cmake python-dev git build-essential
-- git clone https://github.com/llvm-mirror/llvm.git ~/llvm_src; mkdir ~/llvm_build
-- cd ~/llvm_src/tools; git clone https://github.com/llvm-mirror/clang.git
-- cd ~/llvm_build
-- cmake ~/llvm_src -DLLVM_TARGETS_TO_BUILD="X86" -DBUILD_SHARED_LIB=1
-- make package -j 4; sudo make install
-- travis_wait 300
+language: cpp
+compiler:
+- clang++
+- g++
+
+install: make all
