@@ -3,4 +3,6 @@ compiler:
 - clang++
 - g++
 
-install: make all
+install: 
+  - cd LeetCode
+  - make all
